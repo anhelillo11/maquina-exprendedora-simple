@@ -28,8 +28,8 @@ public class MaquinaExpendedoraSimple {
      * precio del billete y el origen y destino dados. Se asume que el precio
      * del billete que se recibe es mayor que 0.
      */
-    public MaquinaExpendedoraSimple(int precioBillete, String lugarDestino) {
-        precioBillete = precioBillete;
+    public MaquinaExpendedoraSimple(int precioBilletee, String lugarDestino) {
+        precioBillete = precioBilletee;
         balanceClienteActual = 0;
         totalDineroAcumulado = 0;
         estacionOrigen = "Leon";
@@ -73,5 +73,10 @@ public class MaquinaExpendedoraSimple {
         totalDineroAcumulado = totalDineroAcumulado + balanceClienteActual;
         // Queda preparada para el proximo cliente
         balanceClienteActual = 0;
+    }
+    
+    public int getTotalDineroAcumulado() {
+        totalDineroAcumulado = totalDineroAcumulado + balanceClienteActual;
+        return totalDineroAcumulado;
     }
 }
